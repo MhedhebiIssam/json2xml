@@ -9,7 +9,29 @@
 * example
 ```nim 
 import json , xmltree , jsontoxml 
-var js = .......
+var js = %* {
+    "Name": "voldemort",
+    "Designation": "PHP Developer",
+    "Salary": 98000,
+    "Age": 27,
+    "Projects": [
+        {
+            "Topic": "Smart Ambulance",
+            "Category": "Android Application",
+            "Months": 2
+        },
+        {
+            "Topic": "AST",
+            "Category": "Embedded System",
+            "Months": 1
+        },
+        {
+            "Topic": "Plant Nursery",
+            "Category": "Website",
+            "Months": 3
+        }
+    ]
+}
 var xml_from_json : XmlNode = json_to_xml(js)
 echo xml_from_json 
 ```
