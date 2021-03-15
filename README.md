@@ -1,31 +1,20 @@
-
-
 # json2xml 
-* convert json to xml  : JsonNode [json](https://nim-lang.org/0.19.0/json.html) ) to [xmltree](https://nim-lang.org/docs/xmltree.html) type XmlNode   : 
+* convert json to xml  : JsonNode [json](https://nim-lang.org/0.19.0/json.html)  to [xmltree](https://nim-lang.org/docs/xmltree.html) type XmlNode   
 
 # Install
 * nimble install json2xml 
 
-# Usage :
-* example : 
-	```nim
+# Usage
+
+* example
+```nim 
 import json , xmltree , jsontoxml 
-var js = %*  {
-	      "Name" : "voldemort",
-	      "Designation" : "PHP Developer",
-	      "Salary" : 98000,
-	      "Age":27,
-	      "Projects" : [
-	              {"Topic":"Smart Ambulance","Category":"Android Application","Months":2},
-	              {"Topic":"AST","Category":"Embedded System","Months":1},
-	              {"Topic":"Plant Nursery","Category":"Website","Months":3}
-			]
-		}
+var js = .......
 var xml_from_json : XmlNode = json_to_xml(js)
-echo json_to_xml(js) 
-  ```
-  * output
-  ```
+echo xml_from_json 
+```
+* output
+```xml
 <json type="object">
   <json type="key" name="Name"><json type="string">voldemort</json></json>
   <json type="key" name="Designation"><json type="string">PHP Developer</json></json>
@@ -49,4 +38,4 @@ echo json_to_xml(js)
         </json></json>
     </json></json>
 </json>
-  ```	
+``` 
