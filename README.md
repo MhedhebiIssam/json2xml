@@ -32,7 +32,7 @@ var js = %* {
         }
     ]
 }
-var xml_from_json : XmlNode = json_to_xml(js)
+var xml_from_json : XmlNode = json2xml(js)
 echo xml_from_json 
 ```
 * output
