@@ -8,7 +8,7 @@
 
 * example
 ```nim 
-import json , xmltree , jsontoxml 
+import json , xmltree , json2xml 
 var js = %* {
     "Name": "voldemort",
     "Designation": "PHP Developer",
