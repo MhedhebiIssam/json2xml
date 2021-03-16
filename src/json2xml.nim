@@ -30,7 +30,7 @@ proc json2xml*(jsnode : JsonNode ) : XmlNode   =
             for sub_child in jsnode.keys()  : 
                 var dict_node =  newElement("json") 
                 dict_node.attrs = {"type" : "key" , "name" : sub_child }.toXmlAttributes
-                dict_node.add(json_to_xml(jsnode[sub_child]))
+                dict_node.add(json2xml(jsnode[sub_child]))
                 chid_str.add(dict_node)
 
         of JArray : 
@@ -39,7 +39,7 @@ proc json2xml*(jsnode : JsonNode ) : XmlNode   =
             for sub_child in jsnode   : 
                 var dict_node =  newElement("json") 
                 dict_node.attrs = {"type" : "index" , "value" : $(i) }.toXmlAttributes
-                dict_node.add(json_to_xml(sub_child))
+                dict_node.add(json2xml(sub_child))
                 chid_str.add(dict_node)
                 i += 1 
     return  chid_str
