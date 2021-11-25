@@ -1,4 +1,4 @@
-# json2xml 
+# json2xml '[*_*]'
 * convert json to xml  : JsonNode [json](https://nim-lang.org/0.19.0/json.html)  to [xmltree](https://nim-lang.org/docs/xmltree.html) type XmlNode   
 
 # Install
